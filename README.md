@@ -4,6 +4,9 @@ React Challenges is a collection of common and interesting coding challenges sol
 
 You can preview the challenges here: [https://react-challenges-oscd.onrender.com/](https://react-challenges-oscd.onrender.com/).
 
+![React Challenges](https://github.com/fwei-io/react-challenges/blob/main/public/images/react-challenges-screenshots.png "React Challenges")
+
+
 ## Table of Contents
 - [React Challenges](#react-challenges)
   - [Table of Contents](#table-of-contents)
