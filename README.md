@@ -21,15 +21,19 @@ React Challenges is a collection of common and interesting coding challenges sol
 
 ### Getting Started
 Clone the Repository
+
 ```git clone https://github.com/fwei-io/react-challenges.git```
 
 Navigate to the directory
+
 ```cd react-challenges```
 
 Install Dependencies
+
 ```npm install```
 
 Start the Application
+
 ```npm run dev```
 
 Open http://localhost:5173 (or assigned port) to view it in the browser.
