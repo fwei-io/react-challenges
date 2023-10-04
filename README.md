@@ -56,4 +56,4 @@ More challenges focusing on hooks like useContext, useMemo, and useCallback.
 Challenges involving React Router and navigation.
 
 ### License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE.txt](https://github.com/fwei-io/react-challenges/blob/main/LICENSE.txt) file for details.
