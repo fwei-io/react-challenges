@@ -4,9 +4,11 @@ export default function Navbar() {
     return (
         <header className="bg-teal-700 text-white sticky top-0 z-10">
             <section className="max-w-6xl mx-auto p-4 flex justify-between items-center">
-                <h1 className="text-3xl font-medium">
-                    <a href="/">React Challenges</a>
-                </h1>
+                <div class="flex items-center">
+                    <img src="/images/logo-x1.png" alt="Logo" class="h-8 w-8 mr-2"/>
+                    <p className="text-3xl font-medium">React Challenges</p>
+                </div>
+                
                 <div>
                     <button
                     id="hamburger-button"
