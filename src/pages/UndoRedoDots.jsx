@@ -96,11 +96,6 @@ export default function UndoRedoDots() {
 
     return (
         <div className='w-full flex flex-wrap'>
-            <h2 className='w-full text-4xl font-bold text-center sm:text-5xl sm:text-left
-                          text-slate-900 dark:text-white'>
-                {page.name}
-            </h2>
-            <p>Challenge: {page.description}</p>
             <div className='mt-10 mb-36 mx-auto justify-center'>
                 <div className='w-full justify-center flex flex-wrap'>
                     <div className="w-full justify-center text-center">

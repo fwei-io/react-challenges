@@ -136,10 +136,6 @@ function ReverseClickedBoxes() {
 
     return (
         <div className='w-full flex flex-wrap'>
-            <h2 className='w-full text-4xl font-bold text-center sm:text-5xl sm:text-left 
-            text-slate-900 dark:text-white'>
-                Reverse Clicked Boxes
-            </h2>
             <div className='mt-28 mb-36 mx-auto justify-center'>
                 <div className='w-full py-20 justify-center flex'>
                     { [...Array(6)].map((_, index) => 

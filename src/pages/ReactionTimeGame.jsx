@@ -124,13 +124,7 @@ function ReactionTimeGame() {
 
     return (
         <div className='w-full flex flex-wrap'>
-            <div className='w-full flex flex-wrap'>
-                <h2 className='w-full text-4xl font-bold text-center sm:text-5xl sm:text-left
-                 text-slate-900 dark:text-white'>
-                    {page.name}
-                </h2>
-                <p>Challenge: {page.description}</p>
-            </div>
+
             <div className='mt-36 mb-36 mx-auto justify-center'>
                 <div className='w-full justify-center items-center text-center flex flex-wrap'>
                     <button onClick={startGame} style={{ display: !showBox ? "block" : "none" }} 

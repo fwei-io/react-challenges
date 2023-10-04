@@ -59,14 +59,17 @@ export default function AnalogClock() {
 }
 
 const code = `
-
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import * as S from '../components/StyledAnalogClock';
 
 export default function AnalogClock() {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
+    const [realHours, setRealHours] = useState(0);
+    const [realMinutes, setRealMinutes] = useState(0);
+    const [realSeconds, setRealSeconds] = useState(0);
+    const page = PageData.filter((element) => element.path == "/AnalogClock")[0]
 
     useEffect(() => {
         const interval = setInterval(()=> {
@@ -74,19 +77,19 @@ export default function AnalogClock() {
             setHours(Math.floor((now.getHours() / 12) * 360));
             setMinutes(Math.floor((now.getMinutes() / 60) * 360));
             setSeconds(Math.floor((now.getSeconds() / 60) * 360));
-        }, 1000);
+            setRealHours(now.getHours());
+            setRealMinutes(now.getMinutes());
+            setRealSeconds(now.getSeconds());
+        }, 500);
 
         return () => {
             clearInterval(interval);
         }
+
     }, []);
 
     return (
         <div className='w-full flex flex-wrap'>
-            <h2 className='w-full text-4xl font-bold text-center sm:text-5xl 
-                sm:text-left text-slate-900 dark:text-white'>
-                Reverse Clicked Boxes
-            </h2>
             <div className='mt-28 mb-36 mx-auto justify-center'>
                 <div className='w-full justify-center flex flex-wrap'>
                     <S.Wrapper>
@@ -97,14 +100,13 @@ export default function AnalogClock() {
                         </S.Clock>
                     </S.Wrapper>
                 </div>
-                <div className='w-full justify-center text-lg font-bold text-center 
-                    sm:text-left text-slate-900 dark:text-white'>
+                <div className='w-full justify-center text-lg font-bold text-center sm:text-left
+                              text-slate-900 dark:text-white'>
                     {hours}&deg; {minutes}&deg; {seconds}&deg;
                     <br />
                     {realHours} : {realMinutes} : {realSeconds}
                 </div>
             </div>
-            <CodeBlock code={code} />
         </div>
     );
 }
