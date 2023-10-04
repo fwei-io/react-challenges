@@ -1,0 +1,16 @@
+.canvas {
+	width: 80vw;
+	height: 500px;
+	border: 2px solid white;
+	top: 20px;
+	background-color: rgb(77, 71, 71);
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	background-color: gold;
+	border-radius: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
