@@ -19,7 +19,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run:
           name: "Run tests"
-          command: "npm test" # or another suitable command
+          command: "npm run build"
 
 workflows:
   say-hello-workflow:
