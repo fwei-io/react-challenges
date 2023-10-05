@@ -11,8 +11,7 @@ jobs:
           command: "npm install"
       - run:
           name: "Run dev"
-          command: "npm run dev"
-          background: true
+          command: "npm run lint"
 
 workflows:
   say-hello-workflow:
