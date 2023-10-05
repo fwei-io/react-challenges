@@ -6,12 +6,20 @@ jobs:
       - image: cimg/node:20.7.0
     steps:
       - checkout
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "package-lock.json" }}
+          - v1-dependencies-
       - run:
           name: "Install npm dependencies"
           command: "npm install"
       - run:
           name: "Run dev"
           command: "npm run build"
+      - save_cache:
+        paths:
+          - node_modules
+        key: v1-dependencies-{{ checksum "package-lock.json" }}
 
 workflows:
   say-hello-workflow:
