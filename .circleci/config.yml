@@ -12,6 +12,7 @@ jobs:
       - run:
           name: "Run dev"
           command: "npm run dev"
+          background: true
 
 workflows:
   say-hello-workflow:
