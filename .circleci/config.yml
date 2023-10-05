@@ -7,19 +7,19 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "package-lock.json" }}
-          - v1-dependencies-
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
       - run:
           name: "Install npm dependencies"
           command: "npm install"
-      - run:
-          name: "Run dev"
-          command: "npm run build"
       - save_cache:
-        paths:
-          - node_modules
-        key: v1-dependencies-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: "Run tests"
+          command: "npm test" # or another suitable command
 
 workflows:
   say-hello-workflow:
